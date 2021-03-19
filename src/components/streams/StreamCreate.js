@@ -1,7 +1,9 @@
 import React from 'react';
 
-const StreamCreate = ()=>{
+class StreamCreate extends React.Component{
+    render(){
     return  <div>StreamCreate</div>
-};
+    }
+}
 
 export default StreamCreate;
