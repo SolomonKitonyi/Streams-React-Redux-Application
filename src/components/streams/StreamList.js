@@ -5,11 +5,14 @@ import {fetchStreams} from '../../actions';
 
 class StreamList extends React.Component{
     componentDidMount(){
-        {this.props.fetchStreams()}
+        this.props.fetchStreams()
     }
     render(){
     return  <div>StreamList</div>
     }
 }
+const mapStateToProps = (state)=>{
+    return {streams: Object.values(state.streams)};
+}
 
-export default connect(null,{fetchStreams}) (StreamList);
+export default connect(mapStateToProps,{fetchStreams}) (StreamList);
