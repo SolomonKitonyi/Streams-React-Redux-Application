@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-const Model = props =>{
+const Modal = props =>{
     return ReactDom.createPortal(
         <div className="ui dimmer modals visible active">
             <div className="ui standard modal visible active">
@@ -12,4 +12,4 @@ const Model = props =>{
     )
 };
 
-export default Model;
+export default Modal;
