@@ -19,7 +19,17 @@ class StreamDelete extends React.Component{
     }
     render(){
         return  (
-            <div>
+            <div>    return  (
+                <div>
+                    StreamDelete
+                    <Modal 
+                    title="Delete Stream"
+                    content="Are you sure you want to Delete this Stream?"
+                    actions={actions}
+                    onDismiss={()=>history.push('/')}
+                    />
+                </div>
+            )
                 StreamDelete
                 <Modal 
                 title="Delete Stream"
@@ -32,4 +42,8 @@ class StreamDelete extends React.Component{
     }   
 }
 
-export default connect(null,{fetchStream}) (StreamDelete);
+const mapStateToProps= (state,ownProps)=>{
+    return {stream:state.streams[ownProps.match.params.id]}
+}
+
+export default connect(mapStateToProps,{fetchStream}) (StreamDelete);
