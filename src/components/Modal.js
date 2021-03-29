@@ -11,11 +11,10 @@ const Modal = props =>{
                     {props.title}
                 </div>
                 <div className="content">
-                    Are you sure you want to delete this Stream?
+                    {props.content}
                 </div>
                 <div className="actions">
-                    <button className="ui button primary">Delete</button>
-                    <button className="ui button">Cancel</button>
+                    {props.actions}
                 </div>
             </div>
         </div>,
