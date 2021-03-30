@@ -1,7 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-const StreamShow = ()=>{
-    return  <div>StreamShow</div>
+class StreamShow extends React.Component{
+    render(){
+        return <div>StreamShow</div>
+    }
 };
 
-export default StreamShow;
+export default connect() (StreamShow);
